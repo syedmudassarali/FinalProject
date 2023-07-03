@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="onSubmit()" [formGroup]='diaryForm'>
+            <div class="form-group">
+
+                <label for="recipe">Recipe Name</label>
+                <input class="form-control" formControlName="recipe" type="text">
+
+                <label for="preptime">Preparation Time</label>
+                <input class="form-control" formControlName="preptime" type="text">
+
+                <label for="cooktime">Cooking Time</label>
+                <input class="form-control" formControlName="cooktime" type="text">
+
+                <label for="cuisine">Cuisine</label>
+                <input class="form-control" formControlName="cuisine" type="text">
+                <label for="course">Course</label>
+                <input class="form-control" formControlName="course" type="text">
+                <label for="diet">Diet</label>
+                <input class="form-control" formControlName="diet" type="text">
+                <label for="ingredients">Ingredients</label>
+                <input class="form-control" formControlName="ingredients" type="text">
+
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>

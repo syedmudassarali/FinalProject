@@ -1,0 +1,40 @@
+<div class="p-3 mb-2 bg-dark text-white">
+<div class="row">
+    <div class="col">
+        <h4>Recipe Data</h4>
+        
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Recipe Name</th>
+                <th>Preparation Time</th>
+                <th>Cooking Time</th>
+                <th>Cuisine</th>
+                <th>Course</th>
+                <th>Diet</th>
+                <th>Ingredients</th>
+                <th *ngIf="isAuthenticated">Action</th>
+
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let diary of diaryEntries; let i = index'>
+                    <td>{{diary.recipe}}</td>
+                    <td>{{diary.preptime}}</td>
+                    <td>{{diary.cooktime}}</td>
+                    <td>{{diary.cuisine}}</td>
+                    <td>{{diary.course}}</td>
+                    <td>{{diary.diet}}</td>
+                    <td>{{diary.ingredients}}</td>
+                    <td *ngIf="isAuthenticated">
+                        <button class="btn btn-primary" (click)="onEdit(diary.id)">Edit</button>   
+                        <button class="btn btn-danger" (click)='onDelete(diary.id)'>Delete</button>
+                    </td>
+                </tr>   
+            </tbody>
+        
+        </table>
+
+    </div>
+</div>
+</div>
